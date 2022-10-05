@@ -1,3 +1,9 @@
-*{
+ul{
     list-style: none;
+}
+
+nav{
+    height: 12rem;
+    position: relative;
+    
 }
