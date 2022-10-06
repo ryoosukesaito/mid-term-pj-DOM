@@ -1,14 +1,63 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
 
-ul{
+li {
     list-style: none;
 }
 
-nav{
-    height: 12rem;
-    position: relative;
-    
+a {
+    color: black;
+    letter-spacing: 1px;
 }
+
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.headerNav {
+    height: 192px;
+    padding: 42px 40px;
+    position: relative;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    line-height: 0.6875rem;
+    letter-spacing: 0.4px;
+
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+
+.logo {
+    font-size: 90px;
+    color: black;
+}
+/* fake */
+
+.cart {
+    justify-content: flex-end;
+}
+
+.cart-count {
+    position: relative;
+    top: -0.75rem;
+    right: 0.4rem;
+    background: none;
+    color:inherit;
+    line-height: inherit;
+    width: unset;
+    display: unset;
+    text-align: unset;
+    font-weight: 500;
+    font-size: 9px;
+}
+
