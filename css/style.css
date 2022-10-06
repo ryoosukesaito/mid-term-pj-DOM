@@ -61,3 +61,88 @@ button {
     font-size: 9px;
 }
 
+/* footer style */
+
+footer {
+    background-color: #f8f8f8;
+}
+
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+.footer-new {
+    padding: 0 6.25rem;
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+
+.footer-left {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-item-container {
+    display: flex;
+    column-count: 3;
+}
+
+.footer-item {
+    padding-right: 3.125rem;
+    border: 0;
+}
+
+.footer-menu {
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+footer .footer-item .footer-menu li {
+    margin-bottom: 0.25rem;
+    height: auto;
+}
+
+.footer-right {
+    width: 30%;
+}
+
+.email-signup {
+    margin-bottom: 0;
+    background-color: inherit;
+}
+
+.mail-text-head {
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    margin-bottom: 0;
+}
+
+.mail-text-p {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: #313131;
+}
+
+.form-email {
+    display: block;
+}
+
+.form-group {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.type-email {
+    width: 100%;
+}
