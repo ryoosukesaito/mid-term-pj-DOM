@@ -137,6 +137,12 @@ header {
     font-size: 9px;
 }
 
+#heart {
+    padding-top: 1px;
+}
+
+/* header end */
+
 /* footer style */
 
 footer {
@@ -222,8 +228,3 @@ footer .footer-item .footer-menu li {
 .type-email {
     width: 100%;
 }
-#heart {
-    padding-top: 1px;
-}
-
-/* header end */
