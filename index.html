@@ -10,6 +10,39 @@
   <title>Document</title>
 </head>
 <body>
+<!-- Cart -->
+<div class="drawer-model-right-show" id="minicart" tabindex="-1" role="dialog" style="display: block;" aria-modal="true"></div>
+<div class="cart-empty" role="document" data-quality="0"></div>
+<div class="right-fade" id="account" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="dialog-account" role="document">
+    <div class="model-content">
+      <div class="cart-header">
+        <button type="button" class="close" data-dismiss="model" aria-label="close">
+          <i class="fa-solid fa-xmark" aria-hidden="true">
+          </i>
+        </button>
+      </div>
+      <div class="cart-body-empty">
+        <div class="d-flex">
+          <p class="mt-4">You have no items in your cart</p>
+        </div>
+      <div class="cart-footer">
+        <button class="cart-empty-action" data-toggle="subpanel">
+          <span>Shipping Countries</span>
+          <i class="fa-sharp fa-solid fa-play"></i>
+        </button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Cart end -->
   <header>
     <div class="headerNav">
 
@@ -152,7 +185,9 @@
             <div class="sign-up-form">
               <form class="form-emai">
                 <div class="form-group">
-                  <input type="email" class="type-email" placeholder="Email">
+                  <input type="email" class="type-email" value name="hpEmailSignup" placeholder="Email">
+                </div>
+                <div class="subit-subscribe">
                   <div class="form-button">
                     <button type="submit" class="submit-button">OK</button>
                   </div>
