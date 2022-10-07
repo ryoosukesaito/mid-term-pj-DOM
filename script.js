@@ -13,12 +13,15 @@
 
 var btn1 = document.getElementById("btn1");
 
-function toggle(){
-    if(btn1.classList.contains("far")){
-        btn1.classList.remove("far");
-        btn1.classList.add("fas"); 
-    }else{
-        btn1.classList.remove("fas");
-        btn1.classList.add("far");
-    }};
+btn1.addEventListener('click',
+  function toggle(){
+      if(btn1.classList.contains("far")){
+          btn1.classList.remove("far");
+          btn1.classList.add("fas"); 
+      }else{
+          btn1.classList.remove("fas");
+          btn1.classList.add("far");
+      }
+    }
+);
 
