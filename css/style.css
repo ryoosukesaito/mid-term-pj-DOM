@@ -271,6 +271,24 @@ header {
     margin-top: 8px;
 }
 
+/* heart icon */
+#btn1 {
+    transition: .4s;
+}
+
+.far:hover {
+    color: #f50057;
+}
+
+.fas {
+    color: #f50057;
+    transition: .4s;
+
+}
+
+
+
+
 /* more button */
 #show-more {
     max-width: 37.5rem;
