@@ -1,3 +1,6 @@
+// show the cart
+
+
 // var heart = document.getElementById("heart");
 
 // function toggle(){
