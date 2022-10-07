@@ -11,38 +11,32 @@
 </head>
 <body>
 <!-- Cart -->
-<div class="drawer-model-right-show" id="minicart" tabindex="-1" role="dialog" style="display: block;" aria-modal="true"></div>
-<div class="cart-empty" role="document" data-quality="0"></div>
-<div class="right-fade" id="account" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="dialog-account" role="document">
-    <div class="model-content">
-      <div class="cart-header">
-        <button type="button" class="close" data-dismiss="model" aria-label="close">
-          <i class="fa-solid fa-xmark" aria-hidden="true">
-          </i>
-        </button>
+  <div class="shopping-cart">
+    <h2 class="cart-title">Your Cart</h2>
+    <div class="cat-content">
+      <div class="cart-box">
+        <img src="" alt="cart-img">
+        <div class="detail-box">
+          <div class="cat-product-title">Perfume</div>
+          <div class="cart-price">$100.25</div>
+          <input type="number" value="1" class="cart-quality">
+        </div> 
+        <i class="fa-solid fa-trash"></i>
       </div>
-      <div class="cart-body-empty">
-        <div class="d-flex">
-          <p class="mt-4">You have no items in your cart</p>
-        </div>
-      <div class="cart-footer">
-        <button class="cart-empty-action" data-toggle="subpanel">
-          <span>Shipping Countries</span>
-          <i class="fa-sharp fa-solid fa-play"></i>
-        </button>
-      </div>
-      </div>
+    </div>  
+
+    <div class="total">
+      <div class="total-title">Total</div>
+      <div class="total-price">$0</div>
     </div>
+    <button type="button" class="btn-buy">Check Out</button>
+    <i class="fa-solid fa-xmark" id="cart-close"></i>
   </div>
-</div>
-
-
-
-
+  
 
 
 <!-- Cart end -->
+
   <header>
     <div class="headerNav">
 
@@ -65,7 +59,7 @@
 
       <div class="header-brand">
         <a href="" class="logo-brand">
-          <h2 class="logo">LOGO</h2>
+          <h2 class="logo">lorem</h2>
         </a>
       </div>
   
