@@ -168,7 +168,14 @@ header {
 
 .show-cart {
     visibility: visible;
-    
+}
+
+.empty-txt {
+    text-align: center;
+}
+.empty-txt p{
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .cart-title {
