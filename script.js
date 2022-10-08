@@ -1,18 +1,6 @@
 // show the cart
 
 
-// var heart = document.getElementById("heart");
-
-// function toggle(){
-//   if(heart.classList.contains("far")){
-//     heart.classList.remove("far");
-//     heart.classList.add("fas");
-//   }else{
-//     heart.classList.remove("fas");
-//     heart.classList.add("far"); 
-//   }
-// };
-
 
 //input data form api
 const productEl = document.querySelector("#row");
@@ -52,7 +40,7 @@ function renderProducts (){
 
         <div class="icon-li">
           <div class="add-wish">
-            <i onclick="toggle(${product.id})" id="btn1" class="far fa-heart"></i>
+            <i onclick="checkIdOfheart(${product.id})" id="btn1" class="far fa-heart"></i>
           </div>
         </div>
 
@@ -172,17 +160,26 @@ function changeNumberOfUnits(action, id) {
 
 
 
-
+//heart button
 var btn1 = document.getElementById("btn1");
 
 btn1.addEventListener('click',
-  function toggle(id){
-      if(id.isTrusted == true && btn1.classList.contains("far")){
-          btn1.classList.remove("far");
-          btn1.classList.add("fas"); 
-      }else{
-          btn1.classList.remove("fas");
-          btn1.classList.add("far");
-      }
-    }
+  checkIdOfheart()
+
+
+// function toggle(id){
+//   // console.log(id);
+
+//   //   if(btn1.classList.contains("far")){
+//   //       btn1.classList.remove("far");
+//   //       btn1.classList.add("fas"); 
+//   //   }else{
+//   //       btn1.classList.remove("fas");
+//   //       btn1.classList.add("far");
+//   //   }
+//   }
 );
+
+function checkIdOfheart(id) {
+  console.log(id);
+}
