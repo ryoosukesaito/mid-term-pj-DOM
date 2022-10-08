@@ -168,12 +168,8 @@ header {
 
 .show-cart {
     visibility: visible;
-    
 }
 
-.hide-cart {
-    visibility: hidden;
-}
 
 .cart-title {
     text-align: center;
