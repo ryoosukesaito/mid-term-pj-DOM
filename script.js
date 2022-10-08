@@ -1,5 +1,23 @@
-// show the cart
+// show and hide the cart
 
+(function () {
+  const cartInfo = document.getElementById('cart-button');
+  const cart = document.getElementById('cart-inside');
+  const close = document.getElementById('close');
+
+
+  cartInfo.addEventListener('click', function(){
+    cart.classList.toggle('show-cart');
+
+    close.addEventListener('click', function() {
+      cart.classList.remove('show-cart');
+    })
+    
+
+  })
+})();
+
+// cart end
 
 
 //input data form api

@@ -11,7 +11,7 @@
 </head>
 <body>
 <!-- Cart -->
-  <div class="shopping-cart">
+  <div class="shopping-cart" id="cart-inside">
     <h2 class="cart-title">Your Cart</h2>
 
     <div class="cart-contents">
@@ -31,7 +31,12 @@
       <div class="total-price">$0</div>
     </div>
     <button type="button" class="btn-buy">Check Out</button>
-    <i class="fa-solid fa-xmark" id="cart-close"></i>
+    <div class="close" id="close">
+      <a href="#" class="close-icon">
+        <i class="fa-solid fa-xmark" id="cart-close"></i>
+      </a>
+    </div>
+    
   </div>
   
 
@@ -84,7 +89,7 @@
 
               </a>
             </li>
-            <li class="cart">
+            <li class="cart" id="cart-button">
               <a href="#" class="icon-link">
                 <i class="fa-solid fa-bag-shopping"></i>
                 <span class="cart-count"> 0 </span>
