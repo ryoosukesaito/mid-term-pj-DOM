@@ -1,4 +1,5 @@
 // show and hide the cart
+const darken = document.getElementsByClassName('.darken');
 
 (function () {
   const cartInfo = document.getElementById('cart-button');
@@ -8,28 +9,30 @@
 
   cartInfo.addEventListener('click', function(){
     cart.classList.toggle('show-cart');
-
-    close.addEventListener('click', function() {
-      cart.classList.remove('show-cart');
-    })
+    // darken.classList.show('dark');
+    cart.style.transition = "all ease-out 0.5s";
+    cart.style.right = "0";
     
-
+    close.addEventListener('click', function() {
+      cart.style.right = "-100%";
+      cart.style.transition = "all ease-out 1.5s"
+      cart.classList.remove('show-cart');
+      // darken.classList.remove('dark');
+    })
   })
+  
 })();
+
+function openDark(){
+  darken.style.visibility = "visible";
+};
+
+function hideDark(){
+  darken.style.visibility = "";
+}
 
 // cart end
 
-// var heart = document.getElementById("heart");
-
-// function toggle(){
-//   if(heart.classList.contains("far")){
-//     heart.classList.remove("far");
-//     heart.classList.add("fas");
-//   }else{
-//     heart.classList.remove("fas");
-//     heart.classList.add("far"); 
-//   }
-// };
 
 
 //input data form api
@@ -134,7 +137,9 @@ function renderSubtotal() {
 
 //render Cart items
 function renderCartItems() {
-  cartItemsEl.innerHTML = ""; //clear cart element
+  //clear cart element
+  cartItemsEl.innerHTML = ""; 
+
   cart.forEach((item) => {
     cartItemsEl.innerHTML += `
       <div class="cart-box">
@@ -190,17 +195,29 @@ function changeNumberOfUnits(action, id) {
 
 
 
-
+//heart button
 var btn1 = document.getElementById("btn1");
 
 btn1.addEventListener('click',
-  function toggle(id){
-      if(id.isTrusted == true && btn1.classList.contains("far")){
-          btn1.classList.remove("far");
-          btn1.classList.add("fas"); 
-      }else{
-          btn1.classList.remove("fas");
-          btn1.classList.add("far");
-      }
-    }
+  // checkIdOfheart(),
+  toggle()
+
 );
+
+
+
+function toggle(id){
+  console.log(id);
+
+  if(btn1.classList.contains("far")){
+      btn1.classList.remove("far");
+      btn1.classList.add("fas"); 
+  }else{
+      btn1.classList.remove("fas");
+      btn1.classList.add("far");
+  }
+}
+
+// function checkIdOfheart(id) {
+//   console.log(id);
+// }

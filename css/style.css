@@ -148,12 +148,25 @@ header {
 }
 
 /* Cart */
+
+.darken {
+    position: fixed;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 110;
+    visibility: hidden;
+}
+
  
 .shopping-cart {
     z-index: 120;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 360px;
     height: 100vh;
     overflow-y: auto;
@@ -208,6 +221,7 @@ header {
     letter-spacing: 1px;
     padding-left: 5px;
 }
+
 
 /* .cart-quality {
     border: 1px solid var(--text-color);
