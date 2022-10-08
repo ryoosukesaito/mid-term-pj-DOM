@@ -154,7 +154,6 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    /*  */
     width: 360px;
     height: 100vh;
     overflow-y: auto;
@@ -163,14 +162,17 @@ header {
     background-color: #fff;
     box-shadow: -2 solid 4px hsl(0 4%, 15%, 10%);
     border: 1px #fff;
-    transition: 1.5s;
-    /* visibility: hidden; */
+    visibility: hidden;
     
 }
 
-.shopping-cart .active {
-    right: 0;
-    transition: .5s;
+.show-cart {
+    visibility: visible;
+    
+}
+
+.hide-cart {
+    visibility: hidden;
 }
 
 .cart-title {
@@ -202,7 +204,6 @@ header {
 
 .cart-product-title p{
     font-size: 1rem;
-    /* text-transform: uppercase; */
     letter-spacing: 1px;
     padding-left: 5px;
 }
@@ -279,7 +280,7 @@ header {
     background-color: #495049;
 }
 
-#cart-close {
+#close {
     position: absolute;
     top: 1rem;
     right: .8rem;
