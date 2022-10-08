@@ -165,7 +165,7 @@ header {
     border: 1px #fff;
     transition: 1.5s;
     /* visibility: hidden; */
-    /* display: none; */
+    
 }
 
 .shopping-cart .active {
@@ -188,7 +188,7 @@ header {
     margin-top: 1rem;
 }
 
-.cart-img {
+.cart-contents img {
     width: 100px;
     height: 100px;
     object-fit: contain;
