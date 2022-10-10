@@ -1,6 +1,39 @@
 // show and hide the cart
+const darken = document.getElementsByClassName('.darken');
 
 
+
+<<<<<<< HEAD
+=======
+  cartInfo.addEventListener('click', function(){
+    cart.classList.toggle('show-cart');
+    // darken.classList.show('dark');
+    cart.style.transition = "all ease-out 0.5s";
+    cart.style.right = "0";
+    emptyCart()
+
+    close.addEventListener('click', function() {
+      cart.style.right = "-100%";
+      cart.style.transition = "all ease-out 1.5s"
+      cart.classList.remove('show-cart');
+      // darken.classList.remove('dark');
+    })
+
+  })
+  
+})();
+
+function openDark(){
+  darken.style.visibility = "visible";
+};
+
+function hideDark(){
+  darken.style.visibility = "";
+}
+
+// cart end
+
+>>>>>>> 83a3f8213b0c4f69134725e8f02e742e0c45bb2e
 
 
 //input data form api
