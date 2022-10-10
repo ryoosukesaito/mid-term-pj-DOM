@@ -1,3 +1,4 @@
+
 //input data form api
 const productEl = document.querySelector("#row");
 const cartItemsEl = document.querySelector(".cart-contents");
@@ -174,8 +175,6 @@ function changeNumberOfUnits(action, id) {
 }
 
 
-
-
 //heart button
 document.addEventListener('DOMContentLoaded',function(){
   var btns = document.querySelectorAll('#btn1');
@@ -194,6 +193,8 @@ document.addEventListener('DOMContentLoaded',function(){
   }
 },false);
 
+
+// show and hide the cart
 
 const addContents = document.getElementById('addContents');
 const cartInfo = document.getElementById('cart-button');
@@ -218,8 +219,6 @@ cartInfo.addEventListener('click', function(){
   addContents.style.right = "0";
   openDark()
 })
-
-
 
 function openCart() {
   incart.classList.toggle('show-cart');
