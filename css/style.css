@@ -149,7 +149,7 @@ header {
 
 /* Cart */
 
-.darken {
+/* .darken {
     position: fixed;
     min-height: 100%;
     width: 100%;
@@ -159,7 +159,7 @@ header {
     cursor: pointer;
     z-index: 110;
     visibility: hidden;
-}
+} */
 
  
 .shopping-cart {
@@ -173,6 +173,8 @@ header {
     overflow-x: hidden;
     padding: 20px;
     background-color: #fff;
+    transition: var(--mainTransition);
+    /* background: rgba(0, 0, 0, 0.5); */
     box-shadow: -2 solid 4px hsl(0 4%, 15%, 10%);
     border: 1px #fff;
     visibility: hidden;
@@ -181,6 +183,7 @@ header {
 
 .show-cart {
     visibility: visible;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .empty-txt {

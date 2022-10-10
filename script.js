@@ -1,5 +1,5 @@
 // show and hide the cart
-const darken = document.getElementsByClassName('.darken');
+// const darken = document.getElementsByClassName('.darken');
 
 (function () {
   const cartInfo = document.getElementById('cart-button');
@@ -25,13 +25,13 @@ const darken = document.getElementsByClassName('.darken');
   
 })();
 
-function openDark(){
-  darken.style.visibility = "visible";
-};
+// function openDark(){
+//   darken.style.visibility = "visible";
+// };
 
-function hideDark(){
-  darken.style.visibility = "";
-}
+// function hideDark(){
+//   darken.style.visibility = "";
+// }
 
 // cart end
 
