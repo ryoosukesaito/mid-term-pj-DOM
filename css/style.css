@@ -23,7 +23,7 @@ header {
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: 1020;
     background-color: white;
     box-sizing: inherit;
     background-color: bisque;
@@ -129,6 +129,28 @@ header {
     justify-content: flex-end;
 }
 
+
+@keyframes cartAnimation {
+    0% {
+        transform: scale(0.6);
+    }
+    10% {
+        transform: scale(0.8);
+    }
+    30% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    80% {
+        transform: scale(1.8);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
 .cart-count {
     position: relative;
     top: -0.75rem;
@@ -141,6 +163,8 @@ header {
     text-align: unset;
     font-weight: 500;
     font-size: 9px;
+    transition: all .5s ease;
+
 }
 
 #heart {
@@ -148,22 +172,37 @@ header {
 }
 
 /* Cart */
+#addContents{
+    z-index: 1030;
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+}
+
 
 .darken {
     position: fixed;
-    min-height: 100%;
+    display:block ;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    z-index: 110;
-    visibility: hidden;
+    z-index: 1100;
+    /* visibility: hidden; */
 }
 
  
 .shopping-cart {
-    z-index: 120;
+    z-index: 1300 ;
     position: fixed;
     top: 0;
     right: -100%;
@@ -173,7 +212,6 @@ header {
     overflow-x: hidden;
     padding: 20px;
     background-color: #fff;
-    box-shadow: -2 solid 4px hsl(0 4%, 15%, 10%);
     border: 1px #fff;
     visibility: hidden;
     
@@ -260,6 +298,7 @@ header {
     padding-bottom: 2px;
     cursor: pointer;
 }
+
 
 .cart-remove {
     font-size: 24px;
@@ -439,6 +478,27 @@ header {
 }
 
 /* heart icon */
+@keyframes heartAnimation {
+    0% {
+        transform: scale(0.3);
+    }
+    10% {
+        transform: scale(0.5);
+    }
+    30% {
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    80% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
 #btn1 {
     transition: .4s;
 }
@@ -448,12 +508,11 @@ header {
 }
 
 .fas {
+    animation: heartAnimation .2s;
     color: #f50057;
-    transition: .4s;
+    transition: 3s;
 
 }
-
-
 
 
 /* more button */
@@ -627,3 +686,60 @@ input {
     pointer-events: none;
 }
 
+/* loading animation */
+.loader {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 100px auto;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    animation: load4 1.8s infinite cubic-bezier(.98,.01,.9,.98);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  @keyframes load4 {
+    0%,
+    100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+  }
+
+  .bg {
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    /* display:flex; */
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1090;
+    position: fixed;
+  }
