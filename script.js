@@ -1,29 +1,41 @@
 // show and hide the cart
 // const darken = document.getElementsByClassName('.darken');
+const cartInfo = document.getElementById('cart-button');
+const incart = document.getElementById('cart-inside');
+const close = document.getElementById('close');
 
-(function () {
-  const cartInfo = document.getElementById('cart-button');
-  const cart = document.getElementById('cart-inside');
-  const close = document.getElementById('close');
+cartInfo.addEventListener('click', function(){
+  incart.classList.toggle('show-cart');
+  incart.style.transition = "all ease-out 0.5s";
+  incart.style.right = "0";
+  emptyCart()
+})
 
 
-  cartInfo.addEventListener('click', function(){
-    cart.classList.toggle('show-cart');
-    // darken.classList.show('dark');
-    cart.style.transition = "all ease-out 0.5s";
-    cart.style.right = "0";
-    emptyCart()
 
-    close.addEventListener('click', function() {
-      cart.style.right = "-100%";
-      cart.style.transition = "all ease-out 1.5s"
-      cart.classList.remove('show-cart');
-      // darken.classList.remove('dark');
-    })
 
-  })
+close.addEventListener('click', function() {
+  incart.style.right = "-100%";
+  incart.style.transition = "all ease-out 1.5s"
+  incart.classList.remove('show-cart');
+})
+
+
+function openCart() {
+  incart.classList.toggle('show-cart');
+  incart.style.transition = "all ease-out 0.5s";
+  incart.style.right = "0";
+  emptyCart()
   
-})();
+}
+
+function closeCart() {
+  incart.style.right = "-100%";
+  incart.style.transition = "all ease-out 1.5s"
+  incart.classList.remove('show-cart');
+  
+}
+
 
 // function openDark(){
 //   darken.style.visibility = "visible";
@@ -67,14 +79,14 @@ function renderProducts (){
       <div id="shop-icon">
 
         <div class="icon-li">
-          <div class="add-cart" onclick="addToCart(${product.id})">
+          <div class="add-cart" onclick="addToCart(${product.id})" style="cursor: pointer;">
             <i class="fa-solid fa-bag-shopping"></i>
           </div>
         </div>
 
 
         <div class="icon-li">
-          <div class="add-wish">
+          <div class="add-wish" style="cursor: pointer;">
             <i onclick="toggle(${product.id})" id="btn1" class="far fa-heart"></i>
           </div>
         </div>
@@ -109,6 +121,7 @@ function emptyCart() {
 // ADD TO CART
 function addToCart(id){
   //check if product already excist in cart
+  openCart();
   if(cart.some((item) => item.id === id)){
     // alert(" Product already in cart!")
     changeNumberOfUnits("plus",id);
@@ -235,6 +248,26 @@ function toggle(id){
   }
 }
 
-// function checkIdOfheart(id) {
-//   console.log(id);
-// }
+
+
+
+// (function showAndHideCart() {
+
+//   cartInfo.addEventListener('click', function(){
+//     incart.classList.toggle('show-cart');
+//     incart.style.transition = "all ease-out 0.5s";
+//     incart.style.right = "0";
+//     emptyCart()
+    
+//     close.addEventListener('click', function() {
+//       incart.style.right = "-100%";
+//       incart.style.transition = "all ease-out 1.5s"
+//       incart.classList.remove('show-cart');
+//     })
+    
+//   })
+// })();
+
+
+
+// cart end

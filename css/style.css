@@ -173,8 +173,6 @@ header {
     overflow-x: hidden;
     padding: 20px;
     background-color: #fff;
-    transition: var(--mainTransition);
-    /* background: rgba(0, 0, 0, 0.5); */
     box-shadow: -2 solid 4px hsl(0 4%, 15%, 10%);
     border: 1px #fff;
     visibility: hidden;
@@ -183,7 +181,6 @@ header {
 
 .show-cart {
     visibility: visible;
-    background: rgba(0, 0, 0, 0.5);
 }
 
 .empty-txt {
@@ -257,8 +254,7 @@ header {
 
 #units .btn {
     font-weight: 800;
-    border-radius: 50%;
-    border: 1px solid gray;
+    border: none;
     width: 30px;
     padding-bottom: 2px;
     cursor: pointer;
@@ -291,14 +287,15 @@ header {
     margin: 1.5rem auto 0 auto;
     padding: 12px 20px;
     border: none;
-    background-color: #999;
+    color: #313131;
+    background-color: rgb(214, 214, 214);
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
 }
 
 .btn-buy:hover {
-    background-color: #495049;
+    background-color: #c9c9c9;
 }
 
 #close {
@@ -354,10 +351,9 @@ header {
 #template {
     display: flex;
     position: relative;
-    /* padding-left: 15px;
-    padding-right: 15px; */
-    flex: 0 0 25%;
-    max-width: 25%;
+    margin: 10px,10px,10px,10x;
+    flex: 0 0 33%;
+    max-width: 33%;
 }
 
 .product {
@@ -365,7 +361,7 @@ header {
     width: 100%;
     margin-bottom: 30px;
     position:relative;
-    border: 1px solid #f0f0f0;
+    border: none;
 }
 
 /* product-img */
@@ -416,8 +412,7 @@ header {
     display: inline-block;
     width: 40px;
     height: 40px;
-    border: 1px solid gray;
-    border-radius: 50%;
+    border:none;
     
 }
 
@@ -428,8 +423,7 @@ header {
     display: inline-block;
     width: 40px;
     height: 40px;
-    border: 1px solid gray;
-    border-radius: 50%;
+    border: none;
 }
 
 .icon-li {
