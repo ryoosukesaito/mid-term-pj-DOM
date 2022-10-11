@@ -124,7 +124,7 @@ function renderCartItems() {
   cart.forEach((item) => {
     cartItemsEl.innerHTML += `
       <div class="cart-box">
-        <img src="product.jpg" alt="cart-img">
+        <img src="${item.image}" alt="cart-img">
         <div class="detail-box">
           <div class="cart-product-title"><p>${item.title}</p></div>
           <div class="cart-price"><p>$ ${item.price}</p></div>
