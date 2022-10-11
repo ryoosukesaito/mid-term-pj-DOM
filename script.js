@@ -283,8 +283,8 @@ function closeSpin(id) {
 //item number's animation after add the item to cart
 
 function cartNumAnimation(){
-  icCart.style.animation = "cartAnimation .3s ease";
   timeId2 = setTimeout(function(){
+    icCart.style.animation = "cartAnimation .3s ease";
     console.log("hi!");
   }, 1100);
 }
