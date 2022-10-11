@@ -1,92 +1,3 @@
-// show and hide the cart
-// const darken = document.getElementsByClassName('.darken');
-
-// const acBtn = document.getElementById('sign-up-btn');
-// const signForm = document.getElementsByClassName('.signup-form');
-// const cancel = document.getElementsByClassName('.btn-cancel');
-
-// acBtn.addEventListener('click', function() {
-//   signForm.classList.toggle('signup-show');
-// });
-
-// cancel.addEventListener('click', function() {
-//   signForm.classList.remove('signup-show');
-// });
-
-const cartInfo = document.getElementById('cart-button');
-const incart = document.getElementById('cart-inside');
-const close = document.getElementById('close');
-
-cartInfo.addEventListener('click', function(){
-  incart.classList.toggle('show-cart');
-  incart.style.transition = "all ease-out 0.5s";
-  incart.style.right = "0";
-  emptyCart()
-})
-
-
-
-
-close.addEventListener('click', function() {
-  incart.style.right = "-100%";
-  incart.style.transition = "all ease-out 1.5s"
-  incart.classList.remove('show-cart');
-})
-
-
-function openCart() {
-  incart.classList.toggle('show-cart');
-  incart.style.transition = "all ease-out 0.5s";
-  incart.style.right = "0";
-  emptyCart()
-  
-}
-
-function closeCart() {
-  incart.style.right = "-100%";
-  incart.style.transition = "all ease-out 1.5s"
-  incart.classList.remove('show-cart');
-  
-}
-
-// var signUp = document.getElementsByClassName('.signup-form');
-
-// document.getElementById('sign-up-btn').addEventListener('click', function(evt) {
-//   var target = evt.target;
-//   if (target.class === 'sign-up-btn') {
-//     signUp.classList.toggle('signup-show');
-//   } else if (target.class === 'btn-cancel') {
-//     signUp.classList.remove('signup-show')
-//   } 
-// }, false);
-
-
-
-// document.addEventListener("DOMContentLoaded", function(){
-// 	const btnAc = document.getElementById('sign-up-btn');
-//   const cancel = document.getElementsByClassName('.btn-cancel');
-//   const signForm = document.getElementsByClassName('.signup-form');
-
-//   btnAc.addEventListener('click', function() {
-//     signForm.classList.toggle('signup-show');
-//     });
-
-//     cancel.addEventListener('click', function() {
-//       cancel.classList.remove('signup-show');
-//     });
-//   });
-
-// function openDark(){
-//   darken.style.visibility = "visible";
-// };
-
-// function hideDark(){
-//   darken.style.visibility = "";
-// }
-
-// cart end
-
-
 
 //input data form api
 const productEl = document.querySelector("#row");
@@ -118,7 +29,7 @@ function renderProducts (){
       <div id="shop-icon">
 
         <div class="icon-li">
-          <div class="add-cart" onclick="addToCart(${product.id})" style="cursor: pointer;">
+          <div class="add-cart" onclick="loadBg(${product.id})" style="cursor: pointer;">
             <i class="fa-solid fa-bag-shopping"></i>
           </div>
         </div>
@@ -126,7 +37,7 @@ function renderProducts (){
 
         <div class="icon-li">
           <div class="add-wish" style="cursor: pointer;">
-            <i onclick="toggle(${product.id})" id="btn1" class="far fa-heart"></i>
+            <i id="btn1" class="far fa-heart"></i>
           </div>
         </div>
 
@@ -160,9 +71,11 @@ function emptyCart() {
 // ADD TO CART
 function addToCart(id){
   //check if product already excist in cart
-  openCart();
   if(cart.some((item) => item.id === id)){
     // alert(" Product already in cart!")
+
+
+    cartNumAnimation();
     changeNumberOfUnits("plus",id);
   }else{
     const item = products.find((product) => product.id === id)
@@ -262,28 +175,113 @@ function changeNumberOfUnits(action, id) {
 }
 
 
-
-
 //heart button
-var btn1 = document.getElementById("btn1");
-
-btn1.addEventListener('click',
-  // checkIdOfheart(),
-  toggle()
-
-);
-
-
-
-function toggle(id){
-  console.log(id);
-
-  if(btn1.classList.contains("far")){
-      btn1.classList.remove("far");
-      btn1.classList.add("fas"); 
-  }else{
-      btn1.classList.remove("fas");
-      btn1.classList.add("far");
+document.addEventListener('DOMContentLoaded',function(){
+  var btns = document.querySelectorAll('#btn1');
+  for( var i = 0;i < btns.length; i++ ){
+    btns[i].addEventListener('click',function(){
+      
+      if(this.classList.contains("far")){
+        this.classList.remove("far");
+        this.classList.add("fas"); 
+      }else{
+        this.classList.remove("fas");
+        this.classList.add("far");
+      }
+      
+    },false );
   }
+},false);
+
+
+// show and hide the cart
+
+const addContents = document.getElementById('addContents');
+const cartInfo = document.getElementById('cart-button');
+const incart = document.getElementById('cart-inside');
+const close = document.getElementById('close');
+
+
+
+close.addEventListener('click', function() {
+  incart.style.right = "-100%";
+  incart.style.transition = "all ease-out 1.5s"
+  incart.classList.remove('show-cart');
+  addContents.style.right = "-100%";
+  hideDark()
+})
+
+cartInfo.addEventListener('click', function(){
+  incart.classList.toggle('show-cart');
+  incart.style.transition = "all ease-out 0.5s";
+  incart.style.right = "0";
+  emptyCart()
+  addContents.style.right = "0";
+  openDark()
+})
+
+function openCart() {
+  incart.classList.toggle('show-cart');
+  incart.style.transition = "all ease-out 0.5s";
+  incart.style.right = "0";
+  emptyCart();
+  
+  // setTimeout(openDark,2000);
+};
+
+function closeCart() {
+  incart.style.right = "-100%";
+  incart.style.transition = "all ease-out 1.5s"
+  incart.classList.remove('show-cart');
+  hideDark();
+};
+
+// cart end
+
+
+// show and hide the cart
+
+const darken = document.getElementById("darken");
+
+function openDark(){
+  darken.style.visibility = " visible ";
+  addContents.style.visibility = "visible";
+  addContents.style.display = "flex";
+  darken.style.display = "block";
+};
+
+function hideDark(){
+  darken.style.visibility = "hidden";
+  addContents.style.visibility = "hidden";
+
+};
+
+// show and hide the cart end
+
+
+//animetion of deleting items
+const bg = document.querySelector(".bg");
+let timeId;
+
+
+function loadBg(id) {
+  bg.style.display = "flex";
+  timeId = setTimeout(function (){
+    closeSpin(id)
+    console.log(id); 
+  } , 1100);
 }
 
+function closeSpin(id) {
+  bg.style.display = "none";
+  clearTimeout(timeId)
+  addToCart(id)
+}
+//End of animetion of deleting items
+
+//item number's animation after add the item to cart
+
+function cartNumAnimation(){
+  totalItemInCartEl.style.animation = "cartNumAnimation .7s";
+  console.log("hi!");
+}
