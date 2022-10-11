@@ -6,7 +6,7 @@ const subtotalItemsEl = document.querySelector(".total-title");
 const subtotalPriceEl = document.querySelector(".total-price");
 const totalItemInCartEl = document.querySelector(".cart-count");
 
-const icCart = document.querySelector("#cart-button")
+const icCart = document.querySelector(".cart")
 
 //READ PRODUCTS
 function renderProducts (){
@@ -85,7 +85,7 @@ function addToCart(id){
       ...item,
       numberOfUnits : 1,
     });
-    console.log(cart);
+    // console.log(cart);
   }
 
   updataCart();
@@ -269,7 +269,7 @@ function loadBg(id) {
   bg.style.display = "flex";
   timeId = setTimeout(function (){
     closeSpin(id)
-    console.log(id); 
+    // console.log(id); 
   } , 1100);
 }
 
@@ -284,14 +284,25 @@ function closeSpin(id) {
 
 function cartNumAnimation(){
   timeId2 = setTimeout(function(){
-    icCart.style.animation = "cartAnimation .3s ease";
-  }, 1100);
+    icCart.style.animation = "cartAnimation .5s";
+    // icCart.classList.replace('cart', 'cart-active');
+
+    console.log("hi!");
+  }, 400);
+
+  timeId2 = setTimeout(function(){
+    icCart.style.animation = "none";
+    // icCart.classList.replace('cart-active', 'cart');
+
+    console.log("seeya!");
+  }, 900);
+
 }
 
 
 // delete Item message
 function deleteItem(){
-
+  
 }
 
 
