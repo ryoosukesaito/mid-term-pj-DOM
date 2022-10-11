@@ -351,14 +351,27 @@ header {
 /* header end */
 
 /* Sign up */
+#sign {
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1090;
+    position: fixed;
+}
 
-.signup-form {
-    z-index: 200;
+#signup-form {
+    position: fixed;
+    z-index: 3000;
     /* display: none; */
     border: 3px solid #646464;
-    background: rgba(0,0,0,0.5);
+    /* background: rgba(0,0,0,0.5); */
     border: none;
-    /* background-color: #fff; */
+    background-color: white;
     width: 40rem;
     height: 40rem;
     margin-top: 40px;

@@ -14,7 +14,7 @@ function renderProducts (){
     <div id="template">
     <div class="product">
       <a href="#" class="img-prod">
-        <img class="product-img" src="product.jpg" alt="perfume"> 
+        <img class="product-img" src="${product.image}" alt="perfume"> 
       </a>
 
       <div class="item-text">
@@ -124,7 +124,7 @@ function renderCartItems() {
   cart.forEach((item) => {
     cartItemsEl.innerHTML += `
       <div class="cart-box">
-        <img src="product.jpg" alt="cart-img">
+        <img src="${item.image}" alt="cart-img">
         <div class="detail-box">
           <div class="cart-product-title"><p>${item.title}</p></div>
           <div class="cart-price"><p>$ ${item.price}</p></div>
@@ -283,5 +283,16 @@ function closeSpin(id) {
 
 function cartNumAnimation(){
   totalItemInCartEl.style.animation = "cartNumAnimation .7s";
-  console.log("hi!");
 }
+
+
+// sign up
+function openForm() {
+  document.getElementById("sign").style.display = "block";
+  
+}
+
+function closeForm() {
+  document.getElementById("sign").style.display = "none";
+}
+// end
