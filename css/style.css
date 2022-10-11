@@ -275,14 +275,6 @@ header {
 }
 
 
-/* .cart-quality {
-    border: 1px solid var(--text-color);
-    outline-color: var(--main-color);
-    width: 2.4rem;
-    text-align: center;
-    font-size: 15px;
-} */
-
 #units {
     display: inline-flex;
     text-align: center;
