@@ -1,5 +1,18 @@
 // show and hide the cart
 // const darken = document.getElementsByClassName('.darken');
+
+// const acBtn = document.getElementById('sign-up-btn');
+// const signForm = document.getElementsByClassName('.signup-form');
+// const cancel = document.getElementsByClassName('.btn-cancel');
+
+// acBtn.addEventListener('click', function() {
+//   signForm.classList.toggle('signup-show');
+// });
+
+// cancel.addEventListener('click', function() {
+//   signForm.classList.remove('signup-show');
+// });
+
 const cartInfo = document.getElementById('cart-button');
 const incart = document.getElementById('cart-inside');
 const close = document.getElementById('close');
@@ -36,6 +49,32 @@ function closeCart() {
   
 }
 
+// var signUp = document.getElementsByClassName('.signup-form');
+
+// document.getElementById('sign-up-btn').addEventListener('click', function(evt) {
+//   var target = evt.target;
+//   if (target.class === 'sign-up-btn') {
+//     signUp.classList.toggle('signup-show');
+//   } else if (target.class === 'btn-cancel') {
+//     signUp.classList.remove('signup-show')
+//   } 
+// }, false);
+
+
+
+// document.addEventListener("DOMContentLoaded", function(){
+// 	const btnAc = document.getElementById('sign-up-btn');
+//   const cancel = document.getElementsByClassName('.btn-cancel');
+//   const signForm = document.getElementsByClassName('.signup-form');
+
+//   btnAc.addEventListener('click', function() {
+//     signForm.classList.toggle('signup-show');
+//     });
+
+//     cancel.addEventListener('click', function() {
+//       cancel.classList.remove('signup-show');
+//     });
+//   });
 
 // function openDark(){
 //   darken.style.visibility = "visible";
@@ -248,26 +287,3 @@ function toggle(id){
   }
 }
 
-
-
-
-// (function showAndHideCart() {
-
-//   cartInfo.addEventListener('click', function(){
-//     incart.classList.toggle('show-cart');
-//     incart.style.transition = "all ease-out 0.5s";
-//     incart.style.right = "0";
-//     emptyCart()
-    
-//     close.addEventListener('click', function() {
-//       incart.style.right = "-100%";
-//       incart.style.transition = "all ease-out 1.5s"
-//       incart.classList.remove('show-cart');
-//     })
-    
-//   })
-// })();
-
-
-
-// cart end

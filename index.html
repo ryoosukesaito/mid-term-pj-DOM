@@ -46,6 +46,8 @@
 
 <!-- Cart end -->
 
+
+
   <header>
     <div class="headerNav">
 
@@ -80,7 +82,7 @@
             </a>
           </li>
           <li>
-            <a href="index.html" class="menu-link">Account</a> 
+            <a href="#" id="sign-up-btn" class="menu-link">Account</a> 
           </li>
         </ul>
         
@@ -427,6 +429,31 @@
     </section>
   </main>
 
+<!-- signup form -->
+<div class="sign">
+  <form class="signup-form" action="sign-up" method="post">
+    <h2 class="s-head">Account</h2>
+    <h2 class="s-h2">Login</h2>
+    <div class="signup-container">
+      <label for="name"><b>Username</b></label>
+      <input type="text" placeholder="Enter username" class="uname" required>
+
+      <label for="psw"><b>Passward</b></label>
+      <input type="text" placeholder="Enter password" class="pass-w" required>
+
+      <button type="submit" class="login-btn">Login</button>
+  </div>
+
+  <div class="login-footer-cont">
+    <button class="btn-cancel" type="button">Cancel</button>
+    <span class="forgot"><a href="#" id="link-p">Forgot password?</a></span>
+  </div>
+</form>
+</div>
+<!-- sign up  end -->
+
+<!-- footer -->
+
   <footer>
     <div class="footer-new">
       <div class="footer-container">
@@ -504,6 +531,7 @@
         </div>
       </div>
   </footer>
+<!-- footer end -->
 
   <script src="./products.js"></script>
   <script src="script.js"></script>
