@@ -14,7 +14,7 @@ function renderProducts (){
     <div id="template">
     <div class="product">
       <a href="#" class="img-prod">
-        <img class="product-img" src="product.jpg" alt="perfume"> 
+        <img class="product-img" src="${product.image}" alt="perfume"> 
       </a>
 
       <div class="item-text">
