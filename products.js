@@ -2,7 +2,7 @@ const products = [
   {
     "id": 0,
     "title": "Lucas's Day  No.1",
-    "price": 120.00,
+    "price": 120.20,
     "image": "/img/product.jpg", 
     "rating": {
       "rate": 3.9,
@@ -72,7 +72,7 @@ const products = [
   {
     "id": 6,
     "title": "Fresh lemon No.6 ",
-    "price": 168,
+    "price": 168.40,
     "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
     "category": "jewelery",
     "image": "/img/product.jpg",
