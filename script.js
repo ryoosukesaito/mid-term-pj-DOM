@@ -6,6 +6,7 @@ const subtotalItemsEl = document.querySelector(".total-title");
 const subtotalPriceEl = document.querySelector(".total-price");
 const totalItemInCartEl = document.querySelector(".cart-count");
 
+const icCart = document.querySelector("#cart-button")
 
 //READ PRODUCTS
 function renderProducts (){
@@ -262,7 +263,7 @@ function hideDark(){
 //animetion of deleting items
 const bg = document.querySelector(".bg");
 let timeId;
-
+let timeId2;
 
 function loadBg(id) {
   bg.style.display = "flex";
@@ -282,6 +283,14 @@ function closeSpin(id) {
 //item number's animation after add the item to cart
 
 function cartNumAnimation(){
-  totalItemInCartEl.style.animation = "cartNumAnimation .7s";
-  console.log("hi!");
+  icCart.style.animation = "cartAnimation .3s ease";
+  timeId2 = setTimeout(function(){
+    console.log("hi!");
+  }, 1100);
+}
+
+
+// delete Item message
+function deleteItem(){
+
 }

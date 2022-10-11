@@ -63,7 +63,7 @@ const products = [
     "price": 695.50,
     "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
     "category": "jewelery",
-    "image": "/img/product.jpg",
+    "image": "/img/product2.jpg",
     "rating": {
       "rate": 4.6,
       "count": 9
@@ -72,10 +72,10 @@ const products = [
   {
     "id": 6,
     "title": "Sope No.6 ",
-    "price": 168,
+    "price": 168.60,
     "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
     "category": "jewelery",
-    "image": "/img/product2.jpg",
+    "image": "/img/product.jpg",
     "rating": {
       "rate": 3.9,
       "count": 7
