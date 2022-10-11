@@ -35,7 +35,7 @@ const products = [
   },
   {
     "id": 3,
-    "title": "Mens No.3",
+    "title": "Lucus No.3",
     "price": 55.99,
     "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
     "category": "men's clothing",
@@ -71,7 +71,7 @@ const products = [
   },
   {
     "id": 6,
-    "title": "Sope No.6 ",
+    "title": "  No.6 ",
     "price": 168,
     "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
     "category": "jewelery",
@@ -83,7 +83,7 @@ const products = [
   },
   {
     "id": 7,
-    "title": "SoSo No.7",
+    "title": "Slim shady No.7",
     "price": 9.99,
     "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
     "category": "jewelery",
@@ -96,7 +96,7 @@ const products = [
   {
     "id": 8,
     "title": "Bubble tea No.8",
-    "price": 10.99,
+    "price": 239.99,
     "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
     "category": "jewelery",
     "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",

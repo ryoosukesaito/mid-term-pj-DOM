@@ -357,6 +357,7 @@ header {
     /* display: none; */
     border: 3px solid #646464;
     background: rgba(0,0,0,0.5);
+    border: none;
     /* background-color: #fff; */
     width: 40rem;
     height: 40rem;
