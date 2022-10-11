@@ -39,6 +39,7 @@
         <i class="fa-solid fa-xmark" id="cart-close"></i>
       </a>
     </div> -->
+
      
   <div class="bg">
     <div class="loader"></div>
@@ -61,6 +62,29 @@
     </div>
   </div>
 
+    <!-- signup form -->   
+<div id="sign">
+  <form id="signup-form" action="sign-up" method="post">
+    <h2 class="s-head">Account</h2>
+    <h2 class="s-h2">Login</h2>
+    <div class="signup-container">
+      <label for="name"><b>Username</b></label>
+      <input type="text" placeholder="Enter username or " class="uname" required>
+  
+      <label for="psw"><b>Passward</b></label>
+      <input type="text" placeholder="Enter password" class="pass-w" required>
+  
+      <button type="submit" class="login-btn">Login</button>
+  </div>
+  
+  <div class="login-footer-cont">
+    <button class="btn-cancel" type="button" onclick="closeForm()">Cancel</button>
+    <span class="forgot"><a href="#" id="link-p">Forgot password?</a></span>
+  </div>
+  </form>
+  </div>
+  <!-- sign up  end -->
+
   <div id="addContents" class="addContents">
 
   <!-- Cart -->
@@ -68,17 +92,7 @@
     
         <h2 class="cart-title">Your Cart</h2>
     
-        <div class="cart-contents">
-          <!-- <div class="cart-box">
-            <img src="" alt="cart-img" class="cart-img">
-            <div class="detail-box">
-              <div class="cat-product-title">Perfume</div>
-              <div class="cart-price">$100.25</div>
-              <input type="number" value="1" class="cart-quality">
-            </div> 
-            <i class="fa-solid fa-trash"></i>
-          </div> -->
-        </div>  
+        <div class="cart-contents"></div>  
     
         <div class="total">
           <div class="total-title">Total  ( 0 items): </div>
@@ -138,11 +152,9 @@
             </a>
           </li>
           <li>
-            <a href="#" id="sign-up-btn" class="menu-link">Account</a> 
+            <a href="#" id="sign-up-btn" class="menu-link" onclick="openForm()">Account</a> 
           </li>
         </ul>
-
-        <!-- <img src="/img/product.jpg" alt=""> -->
         
         <div class="nav-icon">
           <ul id="nav-icon-right">
@@ -169,7 +181,9 @@
   </header>
 
   <!-- Ryosuke part -->
+
   <main>
+
     <section id="item-section">
 
       <div class="main-container">
@@ -235,28 +249,6 @@
     </section>
   </main>
 
-<!-- signup form -->
-<div class="sign">
-  <form class="signup-form" action="sign-up" method="post">
-    <h2 class="s-head">Account</h2>
-    <h2 class="s-h2">Login</h2>
-    <div class="signup-container">
-      <label for="name"><b>Username</b></label>
-      <input type="text" placeholder="Enter username" class="uname" required>
-
-      <label for="psw"><b>Passward</b></label>
-      <input type="text" placeholder="Enter password" class="pass-w" required>
-
-      <button type="submit" class="login-btn">Login</button>
-  </div>
-
-  <div class="login-footer-cont">
-    <button class="btn-cancel" type="button">Cancel</button>
-    <span class="forgot"><a href="#" id="link-p">Forgot password?</a></span>
-  </div>
-</form>
-</div>
-<!-- sign up  end -->
 
 <!-- footer -->
 

@@ -294,3 +294,16 @@ function cartNumAnimation(){
 function deleteItem(){
 
 }
+
+
+// sign up
+function openForm() {
+  document.getElementById("sign").style.display = "block";
+  
+}
+
+function closeForm() {
+  document.getElementById("sign").style.display = "none";
+}
+// end
+
