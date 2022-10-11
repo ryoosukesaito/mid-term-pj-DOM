@@ -1,4 +1,3 @@
-
 //input data form api
 const productEl = document.querySelector("#row");
 const cartItemsEl = document.querySelector(".cart-contents");
@@ -85,7 +84,6 @@ function addToCart(id){
       ...item,
       numberOfUnits : 1,
     });
-    // console.log(cart);
   }
 
   updataCart();
@@ -137,20 +135,21 @@ function renderCartItems() {
           </div>
 
         </div> 
-          <div onclick="removeItemFromCart(${item.id})">
+          <div onclick="deleteItem(${item.id})">
           <i class="cart-remove fa-solid fa-trash"></i>
           </div>
       </div>
     `
   })
 }
-
+// <div onclick="removeItemFromCart(${item.id})">
 //remove item from cart
 function removeItemFromCart(id){
   cart = cart.filter((item) => item.id !== id)
 
   updataCart();
   emptyCart();
+
 }
 
 //change numbers of units for an item
@@ -227,7 +226,6 @@ function openCart() {
   incart.style.right = "0";
   emptyCart();
   
-  // setTimeout(openDark,2000);
 };
 
 function closeCart() {
@@ -269,7 +267,6 @@ function loadBg(id) {
   bg.style.display = "flex";
   timeId = setTimeout(function (){
     closeSpin(id)
-    // console.log(id); 
   } , 1100);
 }
 
@@ -301,8 +298,30 @@ function cartNumAnimation(){
 
 
 // delete Item message
-function deleteItem(){
-  
+
+let showAlart = document.getElementById('delete-items');
+
+var yes = document.getElementById('yes');
+var no = document.getElementById('no');
+var cansel = document.getElementById('cansel');
+
+
+function deleteItem(id){
+  showAlart.style.display = 'flex';
+
+  yes.addEventListener('click', function(){
+    showAlart.style.display = 'none';
+    removeItemFromCart(id)
+  })
+
+  no.addEventListener('click', function(){
+    showAlart.style.display = 'none';
+  })
+
+  cansel.addEventListener('click', function(){
+    showAlart.style.display = 'none';
+  })
+
 }
 
 
@@ -317,42 +336,38 @@ function closeForm() {
 }
 
 
-const form = {
-  email: document.querySelector("#signin-email"),
-  password: document.querySelector("#signin-password"),
-  submit: document.querySelector("#signin-btn-submit"),
-  messages: document.getElementById("form-messages"),
-};
-let button = form.submit.addEventListener("click", (e) => {
-  e.preventDefault();
+let jsonAc = 'accounts.js';
+let acc;
 
-  fetch("accounts.js", {
-    method: "POST",
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email: form.email.value,
-      password: form.password.value,
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      // code here //
-      if (data.error) {
-        alert("Error Password or Username"); /*displays error message*/
-      } else {
-        window.open(
-          "target.html"
-        ); /*opens the target page while Id & password matches*/
+
+async function getInfo(){
+
+  var username1 = document.getElementById("userinput").value
+  var password1 = document.getElementById("passinput").value
+
+  try {
+    const accounts = await sendHttpRequest(
+      "GET",
+      "https://fakestoreapi.com/users"
+    );
+    
+    for(const account of accounts){
+      if(username1 == account.username){
+        acc = account;
+        return
       }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+      console.log(acc);
+      
+    }
+    
+  }catch(err){
+    console.log(err);
+  }
 
-// end
+  
+}
+
+
+
+
 
