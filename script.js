@@ -85,7 +85,6 @@ function addToCart(id){
       ...item,
       numberOfUnits : 1,
     });
-    // console.log(cart);
   }
 
   updataCart();
@@ -137,20 +136,21 @@ function renderCartItems() {
           </div>
 
         </div> 
-          <div onclick="removeItemFromCart(${item.id})">
+          <div onclick="deleteItem(${item.id})">
           <i class="cart-remove fa-solid fa-trash"></i>
           </div>
       </div>
     `
   })
 }
-
+// <div onclick="removeItemFromCart(${item.id})">
 //remove item from cart
 function removeItemFromCart(id){
   cart = cart.filter((item) => item.id !== id)
 
   updataCart();
   emptyCart();
+
 }
 
 //change numbers of units for an item
@@ -227,7 +227,6 @@ function openCart() {
   incart.style.right = "0";
   emptyCart();
   
-  // setTimeout(openDark,2000);
 };
 
 function closeCart() {
@@ -269,7 +268,6 @@ function loadBg(id) {
   bg.style.display = "flex";
   timeId = setTimeout(function (){
     closeSpin(id)
-    // console.log(id); 
   } , 1100);
 }
 
@@ -301,8 +299,30 @@ function cartNumAnimation(){
 
 
 // delete Item message
-function deleteItem(){
-  
+
+let showAlart = document.getElementById('delete-items');
+
+var yes = document.getElementById('yes');
+var no = document.getElementById('no');
+var cansel = document.getElementById('cansel');
+
+
+function deleteItem(id){
+  showAlart.style.display = 'flex';
+
+  yes.addEventListener('click', function(){
+    showAlart.style.display = 'none';
+    removeItemFromCart(id)
+  })
+
+  no.addEventListener('click', function(){
+    showAlart.style.display = 'none';
+  })
+
+  cansel.addEventListener('click', function(){
+    showAlart.style.display = 'none';
+  })
+
 }
 
 
