@@ -6,7 +6,7 @@ const subtotalItemsEl = document.querySelector(".total-title");
 const subtotalPriceEl = document.querySelector(".total-price");
 const totalItemInCartEl = document.querySelector(".cart-count");
 
-const icCart = document.querySelector("#cart-button")
+const icCart = document.querySelector(".cart")
 
 //READ PRODUCTS
 function renderProducts (){
@@ -284,9 +284,11 @@ function closeSpin(id) {
 
 function cartNumAnimation(){
   timeId2 = setTimeout(function(){
-    icCart.style.animation = "cartAnimation .3s ease";
+    icCart.style.animation = "cartAnimation .5s";
+
     console.log("hi!");
-  }, 1100);
+  }, 1500);
+
 }
 
 
