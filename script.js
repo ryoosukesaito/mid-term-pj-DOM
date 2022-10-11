@@ -285,7 +285,6 @@ function closeSpin(id) {
 function cartNumAnimation(){
   timeId2 = setTimeout(function(){
     icCart.style.animation = "cartAnimation .3s ease";
-    console.log("hi!");
   }, 1100);
 }
 
@@ -305,5 +304,44 @@ function openForm() {
 function closeForm() {
   document.getElementById("sign").style.display = "none";
 }
+
+
+const form = {
+  email: document.querySelector("#signin-email"),
+  password: document.querySelector("#signin-password"),
+  submit: document.querySelector("#signin-btn-submit"),
+  messages: document.getElementById("form-messages"),
+};
+let button = form.submit.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  fetch("accounts.js", {
+    method: "POST",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: form.email.value,
+      password: form.password.value,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      // code here //
+      if (data.error) {
+        alert("Error Password or Username"); /*displays error message*/
+      } else {
+        window.open(
+          "target.html"
+        ); /*opens the target page while Id & password matches*/
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 // end
 
