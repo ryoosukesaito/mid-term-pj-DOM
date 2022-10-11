@@ -128,7 +128,10 @@ header {
     justify-content: flex-end;
 }
 
-
+.cart-active {
+    animation: cartAnimation .5s ease;
+    justify-content: flex-end;
+}
 
 @keyframes cartAnimation {
     0% {
