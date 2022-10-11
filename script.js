@@ -285,14 +285,12 @@ function cartNumAnimation(){
     icCart.style.animation = "cartAnimation .5s";
     // icCart.classList.replace('cart', 'cart-active');
 
-    console.log("hi!");
   }, 400);
 
   timeId2 = setTimeout(function(){
     icCart.style.animation = "none";
     // icCart.classList.replace('cart-active', 'cart');
 
-    console.log("seeya!");
   }, 900);
 
 }
